@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOLTO運用ダッシュボード</title>
+  <meta name="description" content="NOLTOの週次・月次ルーティン、note記事、無料テンプレート、Analytics/Search Console確認を管理するためのローカル保存型Webアプリです。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="NOLTO運用ダッシュボード">
+        <span class="brand-mark">N</span>
+        <span>
+          <strong>NOLTO Ops</strong>
+          <small>運用ダッシュボード</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="メインナビゲーション">
+        <a href="#weekly">週次</a>
+        <a href="#monthly">月次</a>
+        <a href="#content">記事</a>
+        <a href="#templates">テンプレート</a>
+        <a href="#metrics">記録</a>
+      <a href="#sns">SNS</a>
+        <a href="#sns">SNS</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" aria-label="モバイルナビゲーション">
+      <a href="#weekly">週次</a>
+      <a href="#monthly">月次</a>
+      <a href="#content">記事</a>
+      <a href="#templates">テンプレート</a>
+      <a href="#metrics">記録</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">NOLTO OPERATION</span>
+          <h1>NOLTOの運用を、週1回の確認で回す。</h1>
+          <p>
+            note記事、無料テンプレート、Search Console、Analytics、リンク確認をひとつにまとめる
+            ローカル保存型の運用ダッシュボードです。
+          </p>
+          <div class="hero-actions">
+            <a href="#weekly" class="btn primary">今日の確認を始める</a>
+            <button class="btn ghost" id="exportDataBtn" type="button">データを書き出す</button>
+          </div>
+          <p class="note">
+            入力内容はこのブラウザのlocalStorageに保存されます。公開サイトに置く場合、個人情報や機密情報は入力しないでください。
+          </p>
+        </div>
+
+        <div class="hero-panel">
+          <div class="panel-title">今週の状態</div>
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span id="weeklyProgress">0%</span>
+              <small>週次チェック</small>
+            </div>
+            <div class="stat-card">
+              <span id="articleCount">0</span>
+              <small>記事メモ</small>
+            </div>
+            <div class="stat-card">
+              <span id="templateCount">0</span>
+              <small>テンプレート</small>
+            </div>
+            <div class="stat-card">
+              <span id="nextActionCount">0</span>
+              <small>未完了タスク</small>
+            </div>
+            <div class="stat-card">
+              <span id="snsScheduledCount">0</span>
+              <small>SNS予定</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-links">
+      <div class="container quick-link-grid">
+        <a href="https://friendly-toffee-1c8e33.netlify.app/" target="_blank" rel="noopener">NOLTOを開く</a>
+        <a href="https://friendly-toffee-1c8e33.netlify.app/records.html" target="_blank" rel="noopener">制作記録</a>
+        <a href="https://friendly-toffee-1c8e33.netlify.app/templates.html" target="_blank" rel="noopener">テンプレート</a>
+        <a href="https://analytics.google.com/" target="_blank" rel="noopener">Analytics</a>
+        <a href="https://search.google.com/search-console" target="_blank" rel="noopener">Search Console</a>
+        <a href="https://note.com/msy9989" target="_blank" rel="noopener">note</a>
+        <a href="#sns">SNS管理</a>
+      </div>
+    </section>
+
+    <section id="weekly" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">WEEKLY ROUTINE</span>
+          <h2>週次チェック</h2>
+          <p>週1回、30〜40分で確認する項目です。チェック状態は保存されます。</p>
+        </div>
+
+        <div class="toolbar">
+          <button class="btn secondary" id="resetWeeklyBtn" type="button">週次チェックをリセット</button>
+          <button class="btn ghost" id="completeWeeklyBtn" type="button">すべて完了にする</button>
+        </div>
+
+        <div class="checklist" id="weeklyChecklist"></div>
+      </div>
+    </section>
+
+    <section id="monthly" class="section soft">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">MONTHLY ROUTINE</span>
+          <h2>月次チェック</h2>
+          <p>月1回、制作記録・テンプレート・アクセス状況を整理します。</p>
+        </div>
+
+        <div class="toolbar">
+          <button class="btn secondary" id="resetMonthlyBtn" type="button">月次チェックをリセット</button>
+          <button class="btn ghost" id="completeMonthlyBtn" type="button">すべて完了にする</button>
+        </div>
+
+        <div class="checklist" id="monthlyChecklist"></div>
+      </div>
+    </section>
+
+    <section id="content" class="section">
+      <div class="container">
+        <div class="section-head inline">
+          <div>
+            <span class="eyebrow">CONTENT PIPELINE</span>
+            <h2>note記事メモ</h2>
+            <p>記事案、投稿済みURL、NOLTO反映状況を管理します。</p>
+          </div>
+          <button class="btn primary" id="addArticleBtn" type="button">記事メモを追加</button>
+        </div>
+
+        <div class="cards" id="articleCards"></div>
+      </div>
+    </section>
+
+    <section id="templates" class="section soft">
+      <div class="container">
+        <div class="section-head inline">
+          <div>
+            <span class="eyebrow">TEMPLATE TRACKER</span>
+            <h2>無料テンプレート管理</h2>
+            <p>公開中・準備中のテンプレートと配布形式を管理します。</p>
+          </div>
+          <button class="btn primary" id="addTemplateBtn" type="button">テンプレートを追加</button>
+        </div>
+
+        <div class="cards" id="templateCards"></div>
+      </div>
+    </section>
+
+
+    <section id="sns" class="section soft">
+      <div class="container">
+        <div class="section-head inline">
+          <div>
+            <span class="eyebrow">SNS POST PLANNER</span>
+            <h2>SNS投稿管理</h2>
+            <p>X投稿の予定、スレッド本文、投稿URL、反応メモを管理します。別日に投稿する内容をここに溜めておけます。</p>
+          </div>
+          <button class="btn primary" id="addSnsPostBtn" type="button">SNS投稿を追加</button>
+        </div>
+
+        <div class="sns-filter">
+          <button class="filter-chip is-active" type="button" data-sns-filter="all">すべて</button>
+          <button class="filter-chip" type="button" data-sns-filter="下書き">下書き</button>
+          <button class="filter-chip" type="button" data-sns-filter="投稿予定">投稿予定</button>
+          <button class="filter-chip" type="button" data-sns-filter="投稿済み">投稿済み</button>
+          <button class="filter-chip" type="button" data-sns-filter="反応確認済み">反応確認済み</button>
+        </div>
+
+        <div class="cards sns-cards" id="snsPostCards"></div>
+
+        <div class="sns-helper">
+          <h3>投稿後に記録するもの</h3>
+          <ul>
+            <li>投稿URL</li>
+            <li>投稿した日</li>
+            <li>いいね・リポスト・返信・プロフィールアクセスなどの反応</li>
+            <li>次に改善すること</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="metrics" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">METRICS MEMO</span>
+          <h2>Analytics / Search Console記録</h2>
+          <p>週次・月次の数字を残して、変化を見える化します。</p>
+        </div>
+
+        <form class="metric-form" id="metricForm">
+          <label>
+            記録日
+            <input type="date" id="metricDate" required>
+          </label>
+          <label>
+            期間
+            <select id="metricPeriod">
+              <option value="直近7日">直近7日</option>
+              <option value="今月">今月</option>
+              <option value="先月">先月</option>
+              <option value="任意">任意</option>
+            </select>
+          </label>
+          <label>
+            アクセス数
+            <input type="number" id="metricViews" min="0" placeholder="例：35">
+          </label>
+          <label>
+            表示回数
+            <input type="number" id="metricImpressions" min="0" placeholder="例：120">
+          </label>
+          <label>
+            クリック数
+            <input type="number" id="metricClicks" min="0" placeholder="例：4">
+          </label>
+          <label class="full">
+            メモ
+            <textarea id="metricMemo" rows="3" placeholder="よく見られたページ、検索キーワード、次に改善することなど"></textarea>
+          </label>
+          <button class="btn primary" type="submit">記録を追加</button>
+        </form>
+
+        <div class="metric-list" id="metricList"></div>
+      </div>
+    </section>
+
+    <section id="actions" class="section soft">
+      <div class="container">
+        <div class="section-head inline">
+          <div>
+            <span class="eyebrow">NEXT ACTION</span>
+            <h2>次にやること</h2>
+            <p>NOLTO運用の小さなタスクを管理します。</p>
+          </div>
+          <button class="btn primary" id="addTaskBtn" type="button">タスクを追加</button>
+        </div>
+
+        <div class="task-list" id="taskList"></div>
+      </div>
+    </section>
+
+    <section class="section data-section">
+      <div class="container data-grid">
+        <div class="data-card">
+          <h2>データのバックアップ</h2>
+          <p>このアプリの入力内容はブラウザ内に保存されます。定期的にJSONを書き出してください。</p>
+          <div class="button-row">
+            <button class="btn primary" id="exportDataBtn2" type="button">JSONを書き出す</button>
+            <label class="btn secondary file-label">
+              JSONを読み込む
+              <input type="file" id="importFile" accept="application/json">
+            </label>
+          </div>
+        </div>
+        <div class="data-card">
+          <h2>公開時の注意</h2>
+          <p>
+            Netlify上に公開しても、入力データは各ブラウザ内に保存されます。
+            ただし画面自体は誰でも開けるため、URLを公開したくない場合は
+            <strong>ops/</strong> など目立たないフォルダに置くか、ローカル利用にしてください。
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="editDialog" class="dialog">
+    <form method="dialog" id="editForm">
+      <div class="dialog-head">
+        <h2 id="dialogTitle">編集</h2>
+        <button type="button" class="icon-btn" id="closeDialogBtn" aria-label="閉じる">×</button>
+      </div>
+      <div id="dialogFields" class="dialog-fields"></div>
+      <div class="dialog-actions">
+        <button type="button" class="btn ghost" id="deleteDialogBtn">削除</button>
+        <button type="submit" class="btn primary">保存</button>
+      </div>
+    </form>
+  </dialog>
+
+  <template id="emptyTemplate">
+    <div class="empty">
+      <p>まだ登録がありません。</p>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

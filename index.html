@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="Enwa9o13pj2TZtWgfmtSp_crAdyvZn3LQwAZy8qHIPU" />
+
+  <title>NOLTO | AIとWebで小さな制作物を積み上げるポートフォリオ</title>
+  <meta name="description" content="NOLTOは、AIとWebを使ったLP制作、問い合わせフォーム構築、テンプレート配布、ツール紹介などの制作記録をまとめたポートフォリオサイトです。">
+
+  <!-- OGP / SNS共有用 -->
+  <meta property="og:site_name" content="NOLTO">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NOLTO | AIとWebで小さな制作物を積み上げるポートフォリオ">
+  <meta property="og:description" content="NOLTOは、AIとWebを使ったLP制作、問い合わせフォーム構築、テンプレート配布、ツール紹介などの制作記録をまとめたポートフォリオサイトです。">
+  <meta property="og:url" content="https://friendly-toffee-1c8e33.netlify.app/">
+  <meta property="og:image" content="https://friendly-toffee-1c8e33.netlify.app/images/ogp-nolto.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NOLTO | AIとWebで小さな制作物を積み上げるポートフォリオ">
+  <meta name="twitter:description" content="NOLTOは、AIとWebを使ったLP制作、問い合わせフォーム構築、テンプレート配布、ツール紹介などの制作記録をまとめたポートフォリオサイトです。">
+  <meta name="twitter:image" content="https://friendly-toffee-1c8e33.netlify.app/images/ogp-nolto.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QHENL6K99"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3QHENL6K99');
+  </script>
+</head>
+
+<body>
+
+  <!-- ================================================
+       ヘッダー
+       ================================================ -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo">NOLTO</a>
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <a href="records.html">制作記録</a>
+        <a href="#sample">制作サンプル</a>
+        <a href="tools.html">おすすめツール</a>
+        <a href="templates.html">テンプレート</a>
+        <a href="#plans">個別相談</a>
+      </nav>
+      <div class="header-actions">
+        <a href="contact.html?plan=どれがよいか相談したい" class="btn btn-primary btn-sm">個別相談する</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="records.html">制作記録</a>
+      <a href="#sample">制作サンプル</a>
+      <a href="tools.html">おすすめツール</a>
+      <a href="templates.html">テンプレート</a>
+      <a href="#plans">個別相談</a>
+      <a href="contact.html?plan=どれがよいか相談したい" class="btn btn-primary btn-sm">個別相談する</a>
+    </nav>
+  </header>
+
+  <!-- ================================================
+       ファーストビュー
+       ================================================ -->
+  <section class="hero">
+    <div class="container hero-inner">
+
+      <!-- 左カラム：テキスト + CTA -->
+      <div class="hero-content">
+        <span class="badge">NOLTO｜制作記録・ポートフォリオ・テンプレート</span>
+
+        <h1 class="hero-title">
+          AIとWebで、<br>
+          <span class="accent">小さな制作物を積み上げる。</span>
+        </h1>
+
+        <p class="hero-sub">
+          NOLTOは、LP制作、問い合わせフォーム、無料テンプレート、ツール紹介などを<br>
+          実際に作りながら記録しているポートフォリオサイトです。
+        </p>
+
+        <div class="hero-actions">
+          <a href="records.html" class="btn btn-primary">制作記録を見る</a>
+          <a href="templates.html" class="btn btn-secondary">無料テンプレートを見る</a>
+        </div>
+
+        <p class="hero-note"><a href="tools.html">おすすめツールを見る →</a></p>
+      </div>
+
+      <!-- 右カラム：ダッシュボード風ビジュアル -->
+      <div class="hero-visual" aria-hidden="true">
+
+        <!-- 最新の制作記録カード -->
+        <div class="hv-record-card">
+          <div class="hv-card-row">
+            <span class="hv-tag-note">NOTE</span>
+            <span class="hv-date">2026.06</span>
+          </div>
+          <p class="hv-record-title">整体院・リラクゼーションサロン向けLPサンプルを作りました</p>
+          <div class="hv-record-meta">
+            <span class="hv-dot"></span>
+            <span>制作記録をnoteで公開中</span>
+          </div>
+        </div>
+
+        <!-- 無料テンプレートカード -->
+        <div class="hv-template-card">
+          <div class="hv-card-row">
+            <span class="hv-tag-free">無料公開中</span>
+          </div>
+          <p class="hv-template-name">HP・SNS簡易診断レポート雛形</p>
+          <div class="hv-formats">
+            <span class="hv-fmt">Word</span>
+            <span class="hv-fmt">PDF</span>
+            <span class="hv-fmt">Markdown</span>
+          </div>
+        </div>
+
+        <!-- 統計バー -->
+        <div class="hv-stats">
+          <div class="hv-stat">
+            <span class="hv-stat-num">10<small>+</small></span>
+            <span class="hv-stat-lbl">制作記録</span>
+          </div>
+          <div class="hv-stat-sep"></div>
+          <div class="hv-stat">
+            <span class="hv-stat-num">3</span>
+            <span class="hv-stat-lbl">LPサンプル</span>
+          </div>
+          <div class="hv-stat-sep"></div>
+          <div class="hv-stat">
+            <span class="hv-stat-num">2</span>
+            <span class="hv-stat-lbl">テンプレート</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       NOLTOで見られるもの
+       ================================================ -->
+  <section class="contents-overview section">
+    <div class="container">
+      <h2 class="section-title">NOLTOで見られるもの</h2>
+
+      <div class="overview-grid">
+
+        <div class="overview-card">
+          <span class="overview-num">01</span>
+          <h3>制作記録</h3>
+          <p>LP制作、問い合わせフォーム、Netlify公開、テンプレート配布など、作ったものと改善したことをnote記事として記録しています。</p>
+          <a href="records.html" class="overview-link">制作記録を見る →</a>
+        </div>
+
+        <div class="overview-card">
+          <span class="overview-num">02</span>
+          <h3>無料テンプレート</h3>
+          <p>HP・SNS簡易診断レポート雛形やSNS投稿案10本テンプレートを、Word・PDF・Excel・Markdownなどでダウンロードできます。</p>
+          <a href="templates.html" class="overview-link">テンプレートを見る →</a>
+        </div>
+
+        <div class="overview-card">
+          <span class="overview-num">03</span>
+          <h3>おすすめツール</h3>
+          <p>AIツール、サイト公開、フォーム連携、デザイン素材、発信用サービスなど、実際に使ったものや検討したものを紹介しています。</p>
+          <a href="tools.html" class="overview-link">ツールを見る →</a>
+        </div>
+
+        <div class="overview-card">
+          <span class="overview-num">04</span>
+          <h3>制作サンプル</h3>
+          <p>工務店向け・整体院向け・体験型イベント向けなど、業種ごとにデザインや構成を変えたLPサンプル3件を公開しています。</p>
+          <a href="#sample" class="overview-link">サンプルを見る →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       制作記録
+       ================================================ -->
+  <section id="records" class="records section">
+    <div class="container">
+      <h2 class="section-title">制作記録</h2>
+      <p class="section-sub">
+        NOLTOで作ったもの、試したこと、改善したことをnote記事として記録しています。すべての記事は制作記録一覧ページにまとめています。
+      </p>
+
+      <div class="records-grid">
+
+        <article class="record-card record-card-new">
+          <div class="record-card-top">
+            <span class="record-tag">NOTE</span>
+            <span class="record-new-label">NEW</span>
+          </div>
+          <h3>整体院・リラクゼーションサロン向けLPサンプルを作りました</h3>
+          <p>工務店向けサンプルとは雰囲気を変え、整体院・リラクゼーションサロン向けに、やさしさ・安心感・予約導線を重視したLPサンプルを制作した記録です。</p>
+          <a href="https://note.com/msy9989/n/nc29645d15f97?app_launch=false" class="record-link" target="_blank" rel="noopener">noteで読む →</a>
+          <a href="sample-relaxation/" class="record-link">サンプルLPを見る →</a>
+        </article>
+
+        <article class="record-card">
+          <span class="record-tag">NOTE</span>
+          <h3>SNS投稿案10本テンプレートを無料公開しました</h3>
+          <p>SNS投稿のテーマ、本文案、画像案、CTA、ハッシュタグ、投稿予定日を整理できる無料テンプレートを公開した記録です。</p>
+          <a href="https://note.com/msy9989/n/n7fae117e617c" class="record-link" target="_blank" rel="noopener">noteで読む →</a>
+        </article>
+
+        <article class="record-card">
+          <span class="record-tag">NOTE</span>
+          <h3>AIで作ったサイトをNetlifyで無料公開した方法</h3>
+          <p>AIで作ったNOLTOをNetlifyで無料公開した流れ、手動デプロイ、公開後に確認したことをまとめた制作記録です。</p>
+          <a href="https://note.com/msy9989/n/n9479df737b32" class="record-link" target="_blank" rel="noopener">noteで読む →</a>
+        </article>
+
+        <article class="record-card">
+          <span class="record-tag">NOTE</span>
+          <h3>HP・SNS簡易診断レポート雛形を無料公開しました</h3>
+          <p>ホームページやSNSの改善点を整理するための無料テンプレートを公開した記録です。Word版、PDF版、Markdown版を配布しています。</p>
+          <a href="templates.html" class="record-link">テンプレートページで見る →</a>
+        </article>
+
+        <article class="record-card">
+          <span class="record-tag">NOTE</span>
+          <h3>NOLTO公開までの全体を振り返り、次にやることを整理した</h3>
+          <p>NOLTO公開までに作ったもの、うまくいったこと、つまずいたこと、今後やることを整理した振り返り記事です。</p>
+          <a href="https://note.com/msy9989/n/n6611e8b20c11" class="record-link" target="_blank" rel="noopener">noteで読む →</a>
+        </article>
+
+        <article class="record-card">
+          <span class="record-tag">NOTE</span>
+          <h3>問い合わせページを完成させ、実際に動作確認した方法</h3>
+          <p>問い合わせフォームの送信、スプレッドシート保存、メール通知、プラン自動選択を実際に確認した記録です。</p>
+          <a href="https://note.com/msy9989/n/n8b1477aa63bf" class="record-link" target="_blank" rel="noopener">noteで読む →</a>
+        </article>
+
+      </div>
+
+      <div class="tools-cta">
+        <a href="records.html" class="btn btn-secondary">すべての制作記録を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       制作サンプル
+       ================================================ -->
+  <section id="sample" class="sample section">
+    <div class="container">
+      <h2 class="section-title">制作サンプル</h2>
+      <p class="section-sub">
+        業種に合わせてデザイン・構成を変えた、NOLTOの制作サンプル3件です。実在する企業ではなく、構成・導線・見せ方の参考として公開しています。
+      </p>
+
+      <!-- 工務店向けサンプル -->
+      <div class="sample-card sample-card--koumuten">
+        <div class="sample-content">
+          <span class="sample-label">工務店・リフォーム会社向けサンプル</span>
+          <h3>地域密着型の工務店LP</h3>
+          <p class="sample-industry-note">信頼感・施工事例・問い合わせ導線を重視した構成</p>
+          <p>
+            施工内容、選ばれる理由、料金目安、相談の流れ、よくある質問を1ページに整理したサンプルです。
+            構成・導線・見せ方の参考としてご覧ください。
+          </p>
+
+          <ul class="sample-list">
+            <li>スマホ対応の1ページLP</li>
+            <li>問い合わせ導線つき</li>
+            <li>サービス内容・料金・FAQ掲載</li>
+            <li>地域密着型ビジネス向けの構成</li>
+          </ul>
+
+          <a href="sample/" class="btn btn-primary">工務店向けサンプルLPを見る</a>
+        </div>
+
+        <div class="sample-preview" aria-label="工務店サンプルLPのイメージ">
+          <div class="preview-browser">
+            <div class="preview-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="preview-body">
+              <div class="preview-hero"></div>
+              <div class="preview-line wide"></div>
+              <div class="preview-line"></div>
+              <div class="preview-grid">
+                <div></div><div></div><div></div>
+              </div>
+              <div class="preview-button"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 整体院・サロン向けサンプル -->
+      <div class="sample-card sample-card--salon">
+        <div class="sample-content">
+          <span class="sample-label sample-label--salon">整体院・リラクゼーションサロン向けサンプル</span>
+          <h3>整体院・リラクゼーションサロン向けLP</h3>
+          <p class="sample-industry-note sample-industry-note--salon">やさしさ・安心感・予約導線を重視した構成</p>
+          <p>
+            やさしい雰囲気、安心感、予約導線を重視した整体院・リラクゼーションサロン向けのLPサンプルです。
+            工務店サンプルとは配色・フォント・構成を変え、業種に合わせたデザインを試しています。
+          </p>
+
+          <ul class="sample-list">
+            <li>清潔感・安心感のある上品なデザイン</li>
+            <li>悩み訴求・施術メニュー・FAQ掲載</li>
+            <li>完全予約制サロン向けの構成</li>
+            <li>スマホ対応のシングルページ</li>
+          </ul>
+
+          <a href="sample-relaxation/" class="btn btn-primary btn-salon">整体院・サロン向けサンプルLPを見る</a>
+        </div>
+
+        <div class="sample-preview" aria-label="整体院サンプルLPのイメージ">
+          <div class="preview-browser">
+            <div class="preview-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="preview-body preview-relaxation">
+              <div class="preview-hero"></div>
+              <div class="preview-line wide"></div>
+              <div class="preview-line"></div>
+              <div class="preview-grid">
+                <div></div><div></div><div></div>
+              </div>
+              <div class="preview-button"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 体験型アウトドアイベント向けサンプル -->
+      <div class="sample-card sample-card--night">
+        <div class="sample-content">
+          <span class="sample-label sample-label--night">体験型アウトドアイベント向けサンプル</span>
+          <h3>体験型アウトドアイベント向けLP</h3>
+          <p class="sample-industry-note sample-industry-note--night">没入感・動的UI・予約導線を重視した構成</p>
+          <p>
+            夜の森をテーマに、タブ切り替え、モーダル、FAQアコーディオン、予約日カード、スクロール演出などを組み込んだ動的LPサンプルです。
+            これまでの2つのサンプルとは違う、動きのあるWeb体験を試しています。
+          </p>
+
+          <ul class="sample-list">
+            <li>星空・焚き火のCSSアニメーション演出</li>
+            <li>タブ切り替え・ギャラリーモーダル</li>
+            <li>残席表示つきの予約日カード</li>
+            <li>カウントアップ・スクロール演出</li>
+          </ul>
+
+          <a href="sample-night-forest/" class="btn btn-primary btn-night">アウトドアイベント向けサンプルLPを見る</a>
+        </div>
+
+        <div class="sample-preview" aria-label="アウトドアイベントサンプルLPのイメージ">
+          <div class="preview-browser">
+            <div class="preview-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="preview-body preview-night">
+              <div class="preview-hero"></div>
+              <div class="preview-line wide"></div>
+              <div class="preview-line"></div>
+              <div class="preview-grid">
+                <div></div><div></div><div></div>
+              </div>
+              <div class="preview-button"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       おすすめツール
+       ================================================ -->
+  <section id="tools" class="tools section">
+    <div class="container">
+      <h2 class="section-title">使ったツール・検討したツール</h2>
+      <p class="section-sub">
+        NOLTOの制作や運営で使ったAIツール、サイト公開、フォーム連携、デザイン素材、発信サービスなどをまとめています。
+      </p>
+
+      <div class="tools-cta">
+        <a href="tools.html" class="btn btn-secondary">おすすめツールを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       無料テンプレート
+       ================================================ -->
+  <section id="templates" class="templates section">
+    <div class="container">
+      <h2 class="section-title">無料テンプレートを公開しています</h2>
+      <p class="section-sub">
+        NOLTOの制作過程で生まれたテンプレートを無料公開しています。現在は、HP・SNS簡易診断レポート雛形とSNS投稿案10本テンプレートをダウンロードできます。
+      </p>
+
+      <div class="templates-grid">
+
+        <div class="template-card">
+          <span class="template-status is-public">無料公開中</span>
+          <h3>HP・SNS簡易診断レポート雛形</h3>
+          <p>ホームページやSNSの改善点を整理する診断レポート雛形です。Word版・PDF版・Markdown版を無料でダウンロードできます。</p>
+          <div class="template-chip-row">
+            <span class="template-chip">Word</span>
+            <span class="template-chip">PDF</span>
+            <span class="template-chip">Markdown</span>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <span class="template-status is-public">無料公開中</span>
+          <h3>SNS投稿案10本テンプレート</h3>
+          <p>SNS投稿のテーマ、本文案、画像案、CTA、ハッシュタグ、投稿予定日を整理できるテンプレートです。Word版・PDF版・Excel版・Markdown版を無料でダウンロードできます。</p>
+          <div class="template-chip-row">
+            <span class="template-chip">Word</span>
+            <span class="template-chip">PDF</span>
+            <span class="template-chip">Excel</span>
+            <span class="template-chip">Markdown</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tools-cta">
+        <a href="templates.html" class="btn btn-primary">テンプレートを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       個別制作・相談について
+       ================================================ -->
+  <section id="plans" class="plans section">
+    <div class="container">
+      <h2 class="section-title">必要な方だけ相談できます</h2>
+      <p class="section-sub">
+        NOLTOでは、制作記録やテンプレートの公開を中心に運営しています。<br>
+        必要に応じて、LP制作や問い合わせ導線の整理などの個別相談も受け付けています。
+      </p>
+
+      <div class="plans-grid">
+
+        <!-- プラン1 -->
+        <article class="plan-card">
+          <div class="plan-head">
+            <span class="plan-tag">まずは診断</span>
+            <h3>HP・SNS簡易診断レポート</h3>
+          </div>
+          <div class="plan-price">
+            <span class="price-num">3,000</span><span class="price-unit">円（税込）</span>
+          </div>
+          <p class="plan-lead">
+            現在のホームページ、SNS、Googleマップ、問い合わせ導線を確認し、改善点を分かりやすくまとめます。
+          </p>
+          <ul class="plan-list">
+            <li>ホームページ改善ポイント</li>
+            <li>SNS改善ポイント</li>
+            <li>問い合わせ導線の確認</li>
+            <li>Googleマップ改善案</li>
+            <li>すぐ直せる優先順位</li>
+          </ul>
+          <p class="plan-delivery">納期：2〜3営業日</p>
+          <a href="contact.html?plan=HP・SNS簡易診断レポート" class="btn btn-primary btn-block">相談する</a>
+        </article>
+
+        <!-- プラン2 -->
+        <article class="plan-card">
+          <div class="plan-head">
+            <span class="plan-tag">SNSを始めたい方へ</span>
+            <h3>SNS投稿案10本作成</h3>
+          </div>
+          <div class="plan-price">
+            <span class="price-num">5,000</span><span class="price-unit">円（税込）</span>
+          </div>
+          <p class="plan-lead">
+            Instagram、X、TikTok、YouTube Shortsなどで使える投稿案を10本作成します。
+          </p>
+          <ul class="plan-list">
+            <li>投稿テーマ10本</li>
+            <li>投稿本文</li>
+            <li>画像・動画のアイデア</li>
+            <li>ハッシュタグ案</li>
+            <li>投稿順の提案</li>
+          </ul>
+          <p class="plan-delivery">納期：2〜3営業日</p>
+          <a href="contact.html?plan=SNS投稿案10本作成" class="btn btn-primary btn-block">相談する</a>
+        </article>
+
+        <!-- プラン3 -->
+        <article class="plan-card">
+          <div class="plan-head">
+            <span class="plan-tag">文章を整えたい方へ</span>
+            <h3>1ページLP原稿作成</h3>
+          </div>
+          <div class="plan-price">
+            <span class="price-num">15,000</span><span class="price-unit">円（税込）</span>
+          </div>
+          <p class="plan-lead">
+            サービスの魅力が伝わる1ページLPの原稿を作成します。サイト制作前の整理にもおすすめです。
+          </p>
+          <ul class="plan-list">
+            <li>キャッチコピー</li>
+            <li>サービス説明文</li>
+            <li>お悩み訴求</li>
+            <li>選ばれる理由</li>
+            <li>FAQ・問い合わせ文言</li>
+          </ul>
+          <p class="plan-delivery">納期：3〜5営業日</p>
+          <a href="contact.html?plan=1ページLP原稿作成" class="btn btn-primary btn-block">相談する</a>
+        </article>
+
+        <!-- プラン4 -->
+        <article class="plan-card">
+          <div class="plan-head">
+            <span class="plan-tag">ページを作りたい方へ</span>
+            <h3>1ページLP制作</h3>
+          </div>
+          <div class="plan-price">
+            <span class="price-num">33,000</span><span class="price-unit">円（税込）</span>
+          </div>
+          <p class="plan-lead">
+            商品・サービスの魅力を1ページにまとめ、問い合わせにつながるLPを制作します。
+          </p>
+          <ul class="plan-list">
+            <li>1ページLP制作</li>
+            <li>スマホ対応</li>
+            <li>問い合わせボタン設置</li>
+            <li>料金・FAQ掲載</li>
+            <li>公開用URLの用意</li>
+          </ul>
+          <p class="plan-delivery">納期：5〜7営業日</p>
+          <a href="contact.html?plan=1ページLP制作" class="btn btn-primary btn-block">相談する</a>
+        </article>
+
+        <!-- プラン5 -->
+        <article class="plan-card plan-card-featured">
+          <div class="recommended-label">まとめてご依頼の方へ</div>
+          <div class="plan-head">
+            <span class="plan-tag">まとめて整えたい方へ</span>
+            <h3>AI集客スターターパック</h3>
+          </div>
+          <div class="plan-price">
+            <span class="price-num">55,000</span><span class="price-unit">円（税込）</span>
+          </div>
+          <p class="plan-lead">
+            LP、SNS投稿案、ブログ記事、改善レポートをまとめて整える総合プランです。
+          </p>
+          <ul class="plan-list">
+            <li>1ページLP制作</li>
+            <li>問い合わせ導線設計</li>
+            <li>SNS投稿案10本</li>
+            <li>ブログ記事1本</li>
+            <li>Googleビジネスプロフィール改善案</li>
+            <li>AI活用ミニレポート</li>
+          </ul>
+          <p class="plan-delivery">納期：7〜10営業日</p>
+          <a href="contact.html?plan=AI集客スターターパック" class="btn btn-primary btn-block">相談する</a>
+        </article>
+
+      </div>
+
+      <div class="plans-note">
+        <p>どのプランが合うか分からない場合は、<a href="contact.html?plan=どれがよいか相談したい">まず相談だけしてみてください。</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       制作・納品の流れ
+       ================================================ -->
+  <section id="flow" class="process section">
+    <div class="container">
+      <h2 class="section-title">制作・納品の流れ</h2>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h3>お問い合わせ</h3>
+          <p>ご希望のプランや作りたいものをお聞かせください。</p>
+        </div>
+
+        <div class="process-arrow" aria-hidden="true">→</div>
+
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h3>ヒアリング</h3>
+          <p>業種・サービス内容・現在のHP・SNSなどを確認します。</p>
+        </div>
+
+        <div class="process-arrow" aria-hidden="true">→</div>
+
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h3>制作・診断</h3>
+          <p>ご依頼内容に応じて、診断レポート・SNS投稿案・LP制作などを進めます。</p>
+        </div>
+
+        <div class="process-arrow" aria-hidden="true">→</div>
+
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h3>確認・修正</h3>
+          <p>内容をご確認いただき、必要に応じて軽微な修正を行います。</p>
+        </div>
+
+        <div class="process-arrow" aria-hidden="true">→</div>
+
+        <div class="process-step">
+          <div class="step-num">05</div>
+          <h3>納品</h3>
+          <p>Googleドキュメント、PDF、公開URLなど、内容に応じた形式で納品します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       よくある質問
+       ================================================ -->
+  <section id="faq" class="faq section">
+    <div class="container">
+      <h2 class="section-title">よくある質問</h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            どのプランを選べばよいか分かりません。
+            <span class="faq-icon" aria-hidden="true">＋</span>
+          </button>
+          <div class="faq-answer">
+            <p>まずは簡易診断プランがおすすめです。現在の状況を確認したうえで、必要な内容をご提案します。「相談だけ」でも構いません。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            ホームページがなくても依頼できますか？
+            <span class="faq-icon" aria-hidden="true">＋</span>
+          </button>
+          <div class="faq-answer">
+            <p>はい。ホームページがない場合でも、LP原稿作成や1ページLP制作から対応できます。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            SNSをまだ始めていなくても大丈夫ですか？
+            <span class="faq-icon" aria-hidden="true">＋</span>
+          </button>
+          <div class="faq-answer">
+            <p>問題ありません。投稿テーマや運用の方向性から作成できます。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            AIで作った文章をそのまま納品するのですか？
+            <span class="faq-icon" aria-hidden="true">＋</span>
+          </button>
+          <div class="faq-answer">
+            <p>いいえ。AIを活用して効率化しながら、人間が内容を確認し、自然で分かりやすい表現に整えます。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            修正はできますか？
+            <span class="faq-icon" aria-hidden="true">＋</span>
+          </button>
+          <div class="faq-answer">
+            <p>各プランとも、納品前の確認時に軽微な修正に対応します。大幅な追加や仕様変更は別途ご相談となります。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            継続的な運用もお願いできますか？
+            <span class="faq-icon" aria-hidden="true">＋</span>
+          </button>
+          <div class="faq-answer">
+            <p>はい。SNS投稿案の継続作成、ブログ記事作成、LP改善、月次レポートなどに対応できます。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            料金以外に費用はかかりますか？
+            <span class="faq-icon" aria-hidden="true">＋</span>
+          </button>
+          <div class="faq-answer">
+            <p>プラン内の制作範囲であれば、基本的には追加費用はありません。独自ドメイン・サーバー・有料素材などが必要な場合は事前にご相談のうえ別途となります。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       運営者情報
+       ================================================ -->
+  <section class="operator section">
+    <div class="container">
+      <h2 class="section-title">運営者情報</h2>
+
+      <div class="operator-card">
+        <div class="operator-content">
+          <span class="operator-label">ABOUT</span>
+          <h3>NOLTOについて</h3>
+          <p>
+            NOLTOは、AIとWebを使って小さなWeb制作物を試しながら記録するポートフォリオサイトです。
+            LP制作、問い合わせフォーム構築、テンプレート配布、おすすめツール紹介などを実際に作りながら公開しています。
+          </p>
+          <p>
+            制作過程やサンプルを公開しながら、
+            必要な方には個別相談を受け付けています。
+          </p>
+        </div>
+
+        <dl class="operator-info">
+          <div>
+            <dt>サービス名</dt>
+            <dd>NOLTO</dd>
+          </div>
+          <div>
+            <dt>所在地</dt>
+            <dd>北海道</dd>
+          </div>
+          <div>
+            <dt>対応エリア</dt>
+            <dd>全国対応</dd>
+          </div>
+          <div>
+            <dt>公開内容</dt>
+            <dd>制作記録、制作サンプル、テンプレート、おすすめツール</dd>
+          </div>
+          <div>
+            <dt>個別相談</dt>
+            <dd>お問い合わせフォームよりご連絡ください</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       最終CTA
+       ================================================ -->
+  <section class="contact-cta">
+    <div class="container">
+      <h2>制作記録やテンプレートを<br>ご覧ください。</h2>
+      <p>
+        NOLTOでは、作ったものや試したことを記録しながら、使えるテンプレートも公開しています。<br>
+        必要な方には個別相談も受け付けています。
+      </p>
+
+      <div class="cta-buttons">
+        <a href="records.html" class="btn btn-primary btn-large">制作記録を見る</a>
+        <a href="templates.html" class="btn btn-secondary-w btn-large">テンプレートを見る</a>
+      </div>
+      <p class="cta-note"><a href="contact.html?plan=どれがよいか相談したい" class="cta-note-link">個別相談をご希望の方はこちら →</a></p>
+    </div>
+  </section>
+
+  <!-- ================================================
+       フッター
+       ================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">NOLTO</p>
+      <nav class="footer-nav">
+        <a href="records.html">制作記録</a>
+        <a href="#sample">制作サンプル</a>
+        <a href="tools.html">おすすめツール</a>
+        <a href="templates.html">テンプレート</a>
+        <a href="#plans">個別相談</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+      </nav>
+      <p class="footer-copy">© NOLTO All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

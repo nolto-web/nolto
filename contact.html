@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お問い合わせ | NOLTO</title>
+  <meta name="description" content="NOLTOへのお問い合わせページです。LP制作、問い合わせ導線、テンプレート、Web集客の整理などについて相談できます。" />
+
+  <!-- OGP / SNS共有用 -->
+  <meta property="og:site_name" content="NOLTO">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="お問い合わせ | NOLTO">
+  <meta property="og:description" content="NOLTOへのお問い合わせページです。LP制作、問い合わせ導線、テンプレート、Web集客の整理などについて相談できます。">
+  <meta property="og:url" content="https://friendly-toffee-1c8e33.netlify.app/contact.html">
+  <meta property="og:image" content="https://friendly-toffee-1c8e33.netlify.app/images/ogp-nolto.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="お問い合わせ | NOLTO">
+  <meta name="twitter:description" content="NOLTOへのお問い合わせページです。LP制作、問い合わせ導線、テンプレート、Web集客の整理などについて相談できます。">
+  <meta name="twitter:image" content="https://friendly-toffee-1c8e33.netlify.app/images/ogp-nolto.png">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QHENL6K99"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3QHENL6K99');
+  </script>
+
+  <style>
+    .contact-page {
+      background: #f6f8fb;
+      min-height: 100vh;
+      padding: 48px 20px;
+    }
+
+    .contact-container {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .contact-header .eyebrow {
+      color: #d97706;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .contact-header h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      color: #10233f;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .contact-header p {
+      color: #5b677a;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .contact-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 16px 40px rgba(16, 35, 63, 0.08);
+      padding: 32px;
+      border: 1px solid #e7ebf0;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-weight: 700;
+      color: #1f2937;
+      font-size: 14px;
+    }
+
+    .required {
+      color: #dc2626;
+      font-size: 12px;
+      margin-left: 4px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #d6dce5;
+      border-radius: 10px;
+      padding: 13px 14px;
+      font-size: 16px;
+      font-family: inherit;
+      background: #fff;
+      color: #111827;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #1d4ed8;
+      box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.12);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .privacy-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 16px;
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.7;
+      margin-top: 24px;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 18px;
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .checkbox-row input {
+      width: auto;
+      margin-top: 4px;
+    }
+
+    .form-actions {
+      margin-top: 28px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .submit-btn {
+      border: none;
+      background: #d97706;
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 15px 36px;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(217, 119, 6, 0.22);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    .submit-btn:hover {
+      background: #b45309;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 26px rgba(217, 119, 6, 0.28);
+    }
+
+    .submit-btn:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .back-link {
+      color: #334155;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .form-message {
+      display: none;
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .form-message.success {
+      display: block;
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+    }
+
+    .form-message.error {
+      display: block;
+      background: #fef2f2;
+      color: #b91c1c;
+      border: 1px solid #fecaca;
+    }
+
+    @media (max-width: 760px) {
+      .contact-page {
+        padding: 32px 16px;
+      }
+
+      .contact-card {
+        padding: 24px 18px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-actions {
+        flex-direction: column;
+      }
+
+      .submit-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="contact-page">
+    <div class="contact-container">
+      <div class="contact-header">
+        <div class="eyebrow">CONTACT</div>
+        <h1>NOLTOへのお問い合わせ</h1>
+        <p>
+          制作記録やサンプルをご覧いただき、個別相談をご希望の方は以下のフォームよりご連絡ください。<br />
+          内容を確認後、通常1〜2営業日以内に返信いたします。
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <form id="contactForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="company">会社名・屋号</label>
+              <input type="text" id="company" name="company" placeholder="例：AI工務店" />
+            </div>
+
+            <div class="form-group">
+              <label for="name">お名前<span class="required">必須</span></label>
+              <input type="text" id="name" name="name" required placeholder="例：AI 太郎" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">メールアドレス<span class="required">必須</span></label>
+              <input type="email" id="email" name="email" required placeholder="例：sample@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="tel">電話番号</label>
+              <input type="tel" id="tel" name="tel" placeholder="例：090-0000-0000" />
+            </div>
+
+            <div class="form-group">
+              <label for="industry">業種</label>
+              <input type="text" id="industry" name="industry" placeholder="例：工務店、美容室、整体院など" />
+            </div>
+
+            <div class="form-group">
+              <label for="plan">希望するプラン<span class="required">必須</span></label>
+              <select id="plan" name="plan" required>
+                <option value="">選択してください</option>
+                <option value="HP・SNS簡易診断レポート：3,000円">HP・SNS簡易診断レポート：3,000円</option>
+                <option value="SNS投稿案10本作成：5,000円">SNS投稿案10本作成：5,000円</option>
+                <option value="1ページLP原稿作成：15,000円">1ページLP原稿作成：15,000円</option>
+                <option value="1ページLP制作：33,000円">1ページLP制作：33,000円</option>
+                <option value="AI集客スターターパック：55,000円">AI集客スターターパック：55,000円</option>
+                <option value="どれがよいか相談したい">どれがよいか相談したい</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="website">現在のホームページURL</label>
+              <input type="url" id="website" name="website" placeholder="例：https://example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="instagram">Instagram URL</label>
+              <input type="url" id="instagram" name="instagram" placeholder="例：https://www.instagram.com/example" />
+            </div>
+
+            <div class="form-group">
+              <label for="x">X URL</label>
+              <input type="url" id="x" name="x" placeholder="例：https://x.com/example" />
+            </div>
+
+            <div class="form-group">
+              <label for="tiktok">TikTok URL</label>
+              <input type="url" id="tiktok" name="tiktok" placeholder="例：https://www.tiktok.com/@example" />
+            </div>
+
+            <div class="form-group">
+              <label for="youtube">YouTube URL</label>
+              <input type="url" id="youtube" name="youtube" placeholder="例：https://www.youtube.com/@example" />
+            </div>
+
+            <div class="form-group">
+              <label for="facebook">Facebook URL</label>
+              <input type="url" id="facebook" name="facebook" placeholder="例：https://www.facebook.com/example" />
+            </div>
+
+            <div class="form-group">
+              <label for="otherSns">その他SNS URL</label>
+              <input type="url" id="otherSns" name="otherSns" placeholder="その他SNS、ブログ、ポータルサイトなど" />
+            </div>
+
+            <div class="form-group full">
+              <label for="deadline">希望納期</label>
+              <input type="text" id="deadline" name="deadline" placeholder="例：できるだけ早く、今月中、相談して決めたい など" />
+            </div>
+
+            <div class="form-group full">
+              <label for="message">相談内容<span class="required">必須</span></label>
+              <textarea id="message" name="message" required placeholder="現在のお悩み、依頼したい内容、質問などをご記入ください。"></textarea>
+            </div>
+          </div>
+
+          <div class="privacy-box">
+            ご入力いただいた内容は、お問い合わせへの回答およびサービス案内のために使用します。
+            内容を第三者へ無断で提供することはありません。
+          </div>
+
+          <label class="checkbox-row">
+            <input type="checkbox" id="agree" required />
+            <span>入力内容の送信に同意します。<span class="required">必須</span></span>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn" id="submitBtn">送信する</button>
+            <a href="index.html" class="back-link">トップページへ戻る</a>
+          </div>
+
+          <div id="formMessage" class="form-message"></div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxKNyg8sMCV7yi3j1b5BOIzTQKCpZxqwUokhk4PU1stcXbhEgJjKyJrhEOKVMwgOQOD/exec";
+
+    const params = new URLSearchParams(window.location.search);
+    const planParam = params.get("plan");
+
+    if (planParam) {
+      const planSelect = document.getElementById("plan");
+      const selectedPlan = planParam.trim();
+
+      const planMap = {
+        "HP・SNS簡易診断レポート": "HP・SNS簡易診断レポート：3,000円",
+        "SNS投稿案10本作成": "SNS投稿案10本作成：5,000円",
+        "1ページLP原稿作成": "1ページLP原稿作成：15,000円",
+        "1ページLP制作": "1ページLP制作：33,000円",
+        "AI集客スターターパック": "AI集客スターターパック：55,000円",
+        "どれがよいか相談したい": "どれがよいか相談したい"
+      };
+
+      if (planMap[selectedPlan]) {
+        planSelect.value = planMap[selectedPlan];
+      }
+    }
+
+    const form = document.getElementById("contactForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const formMessage = document.getElementById("formMessage");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      formMessage.className = "form-message";
+      formMessage.textContent = "";
+
+      if (!GAS_ENDPOINT || GAS_ENDPOINT === "YOUR_GOOGLE_APPS_SCRIPT_URL") {
+        formMessage.className = "form-message error";
+        formMessage.textContent = "送信先URLが未設定です。Google Apps ScriptのURLを設定してください。";
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "送信中...";
+
+      const formData = new FormData(form);
+      const data = {
+        company: formData.get("company"),
+        name: formData.get("name"),
+        email: formData.get("email"),
+        tel: formData.get("tel"),
+        industry: formData.get("industry"),
+        plan: formData.get("plan"),
+        website: formData.get("website"),
+        instagram: formData.get("instagram"),
+        x: formData.get("x"),
+        tiktok: formData.get("tiktok"),
+        youtube: formData.get("youtube"),
+        facebook: formData.get("facebook"),
+        otherSns: formData.get("otherSns"),
+        deadline: formData.get("deadline"),
+        message: formData.get("message"),
+        pageUrl: window.location.href,
+        submittedAt: new Date().toLocaleString("ja-JP")
+      };
+
+      try {
+        await fetch(GAS_ENDPOINT, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify(data)
+        });
+
+        form.reset();
+
+        formMessage.className = "form-message success";
+        formMessage.textContent = "送信処理を受け付けました。確認のうえ、1〜2営業日以内にご連絡いたします。";
+      } catch (error) {
+        formMessage.className = "form-message error";
+        formMessage.textContent = "送信に失敗しました。時間をおいて再度お試しください。";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "送信する";
+      }
+    });
+  </script>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">NOLTO</p>
+      <nav class="footer-nav">
+        <a href="records.html">制作記録</a>
+        <a href="index.html#sample">制作サンプル</a>
+        <a href="tools.html">おすすめツール</a>
+        <a href="templates.html">テンプレート</a>
+        <a href="index.html#plans">個別相談</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+      </nav>
+      <p class="footer-copy">© NOLTO All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

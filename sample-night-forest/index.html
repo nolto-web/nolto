@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>北海道ナイトフォレストツアー | 体験型アウトドアイベントLPサンプル</title>
+  <meta name="description" content="NOLTOが制作した体験型アウトドアイベント向けの動的LPサンプルです。スクロール演出、タブ切り替え、予約日カード、FAQアコーディオン、モーダルなどを含む構成です。">
+
+  <!-- OGP / SNS共有用 -->
+  <meta property="og:site_name" content="NOLTO">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="北海道ナイトフォレストツアー | NOLTO LPサンプル">
+  <meta property="og:description" content="NOLTOが制作した体験型アウトドアイベント向けの動的LPサンプルです。夜の森をテーマに、演出と予約導線を重視して構成しています。">
+  <meta property="og:url" content="https://friendly-toffee-1c8e33.netlify.app/sample-night-forest/">
+  <meta property="og:image" content="https://friendly-toffee-1c8e33.netlify.app/images/ogp-nolto.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="北海道ナイトフォレストツアー | NOLTO LPサンプル">
+  <meta name="twitter:description" content="NOLTOが制作した体験型アウトドアイベント向けの動的LPサンプルです。夜の森をテーマに、演出と予約導線を重視して構成しています。">
+  <meta name="twitter:image" content="https://friendly-toffee-1c8e33.netlify.app/images/ogp-nolto.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QHENL6K99"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3QHENL6K99');
+  </script>
+</head>
+
+<body>
+
+  <!-- ================================================
+       NOLTO サンプルバー
+       ================================================ -->
+  <div class="sample-bar">
+    <p class="sample-bar-text">これはNOLTOが制作した、体験型アウトドアイベント向けの動的LPサンプルです。</p>
+    <nav class="sample-bar-links" aria-label="NOLTOサイトへのリンク">
+      <a href="../index.html">NOLTOへ戻る</a>
+      <a href="../records.html">制作記録を見る</a>
+      <a href="../contact.html?plan=1ページLP制作" class="sample-bar-cta">このようなLPを相談する</a>
+    </nav>
+  </div>
+
+  <!-- ================================================
+       ヒーロー
+       ================================================ -->
+  <header class="hero" id="top">
+    <!-- 星空レイヤー -->
+    <div class="sky" aria-hidden="true">
+      <div class="stars stars-1"></div>
+      <div class="stars stars-2"></div>
+      <div class="stars stars-3"></div>
+      <div class="shooting-star"></div>
+    </div>
+
+    <!-- 森のシルエット -->
+    <div class="forest-silhouette" aria-hidden="true">
+      <svg viewBox="0 0 1440 240" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="trees trees-back" d="M0,240 L0,170 L30,165 L40,120 L55,160 L70,90 L90,150 L100,140 L120,170 L150,160 L165,100 L185,155 L200,130 L225,165 L250,150 L265,80 L290,150 L310,140 L330,170 L360,155 L380,110 L400,160 L420,145 L450,170 L480,158 L495,95 L520,155 L540,140 L565,168 L590,150 L610,105 L630,158 L650,145 L680,170 L710,155 L725,85 L750,150 L770,142 L795,168 L820,152 L840,112 L860,160 L880,148 L910,170 L940,156 L955,90 L980,152 L1000,142 L1025,168 L1050,150 L1070,100 L1090,158 L1110,145 L1140,170 L1170,155 L1185,108 L1210,158 L1230,140 L1255,168 L1280,150 L1295,88 L1320,152 L1340,142 L1365,168 L1390,152 L1410,118 L1425,160 L1440,150 L1440,240 Z"/>
+        <path class="trees trees-front" d="M0,240 L0,200 L25,195 L38,150 L52,190 L68,125 L88,185 L105,175 L128,200 L155,190 L172,135 L195,188 L215,165 L240,198 L268,182 L285,115 L310,182 L332,172 L355,200 L385,188 L405,145 L428,192 L450,178 L478,200 L508,190 L525,130 L550,188 L572,172 L598,198 L625,182 L645,140 L668,190 L690,178 L718,200 L748,188 L765,120 L790,182 L812,175 L838,198 L862,185 L882,148 L905,192 L928,180 L955,200 L985,190 L1002,128 L1028,185 L1050,175 L1075,198 L1102,182 L1122,138 L1145,190 L1168,178 L1198,200 L1228,188 L1245,142 L1270,190 L1292,172 L1318,198 L1345,182 L1362,122 L1388,185 L1408,175 L1428,195 L1440,188 L1440,240 Z"/>
+      </svg>
+    </div>
+
+    <!-- 焚き火の残光 -->
+    <div class="ember-glow" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <p class="hero-eyebrow">HOKKAIDO NIGHT FOREST TOUR<span class="hero-eyebrow-note">— 架空の体験ツアー（制作サンプル）</span></p>
+
+      <h1 class="hero-title">夜の森で、<br>日常をほどく。</h1>
+
+      <p class="hero-sub">
+        星空、焚き火、静かな森の音。<br>
+        HOKKAIDO NIGHT FOREST TOUR は、北海道の架空の森を舞台にした<br class="pc-br">少人数制のナイトウォーク体験です。
+      </p>
+
+      <div class="hero-actions">
+        <a href="#story" class="btn btn-fill">ツアー内容を見る</a>
+        <a href="#schedule" class="btn btn-ghost">空き日程を見る</a>
+      </div>
+
+      <!-- ツアー情報カード -->
+      <div class="hero-info-card">
+        <dl>
+          <div class="info-item">
+            <dt>所要時間</dt>
+            <dd>約120分</dd>
+          </div>
+          <div class="info-item">
+            <dt>定員</dt>
+            <dd>1日6名</dd>
+          </div>
+          <div class="info-item">
+            <dt>開催時期</dt>
+            <dd>5月〜10月</dd>
+          </div>
+          <div class="info-item">
+            <dt>料金目安</dt>
+            <dd>8,800円〜</dd>
+          </div>
+        </dl>
+        <p class="info-note">※ このページは架空サンプルです。実在するツアーではありません。</p>
+      </div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span class="scroll-cue-line"></span>
+      <span class="scroll-cue-label">SCROLL</span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================================================
+         体験の魅力
+         ================================================ -->
+    <section class="features section" id="features">
+      <div class="container">
+        <p class="section-eyebrow">EXPERIENCE</p>
+        <h2 class="section-title">ただ歩くだけではない、<br class="sp-br">夜の森の体験。</h2>
+
+        <div class="features-grid">
+          <article class="feature-card fade-item">
+            <div class="feature-visual feature-visual--stars" aria-hidden="true">
+              <span class="fv-star s1"></span><span class="fv-star s2"></span><span class="fv-star s3"></span>
+              <span class="fv-star s4"></span><span class="fv-star s5"></span>
+            </div>
+            <h3>星空を見上げる<br>ナイトウォーク</h3>
+            <p>街の明かりが届かない森の中で、頭上いっぱいに広がる星空を眺めながらゆっくり歩きます。ガイドが星座や月の話を交えて案内します。</p>
+          </article>
+
+          <article class="feature-card fade-item">
+            <div class="feature-visual feature-visual--fire" aria-hidden="true">
+              <span class="fv-flame f1"></span>
+              <span class="fv-flame f2"></span>
+              <span class="fv-flame f3"></span>
+              <span class="fv-log"></span>
+            </div>
+            <h3>焚き火を囲む<br>静かな休憩時間</h3>
+            <p>ウォークの途中、焚き火を囲んで温かい飲み物を片手にひと休み。火の音と森の気配だけが聞こえる、特別な時間です。</p>
+          </article>
+
+          <article class="feature-card fade-item">
+            <div class="feature-visual feature-visual--guide" aria-hidden="true">
+              <span class="fv-lantern"></span>
+              <span class="fv-lantern-glow"></span>
+            </div>
+            <h3>ガイドによる<br>森の解説と写真撮影</h3>
+            <p>夜の森に詳しいガイドが、植物や動物の気配、夜だけの森の表情を解説。希望者には記念写真の撮影サポートもあります。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         ツアーの流れ（タイムライン）
+         ================================================ -->
+    <section class="story section" id="story">
+      <div class="container">
+        <p class="section-eyebrow">STORY</p>
+        <h2 class="section-title">ツアーの流れ</h2>
+
+        <ol class="timeline">
+          <li class="timeline-item fade-item">
+            <div class="tl-marker"><span class="tl-num">01</span></div>
+            <div class="tl-body">
+              <h3>受付・ガイダンス</h3>
+              <p>集合場所で受付を済ませ、ガイドから夜の森の歩き方と注意点を聞きます。ランタンと防寒具をお渡しします。</p>
+            </div>
+          </li>
+          <li class="timeline-item fade-item">
+            <div class="tl-marker"><span class="tl-num">02</span></div>
+            <div class="tl-body">
+              <h3>ランタンを持って森へ</h3>
+              <p>ランタンの灯りを頼りに、ゆっくりと森の中へ。目が暗さに慣れてくると、夜の森の輪郭が見えてきます。</p>
+            </div>
+          </li>
+          <li class="timeline-item fade-item">
+            <div class="tl-marker"><span class="tl-num">03</span></div>
+            <div class="tl-body">
+              <h3>星空観察スポットへ移動</h3>
+              <p>森が開けた観察スポットでランタンを消し、満天の星空を見上げます。流れ星が見えることもあります。</p>
+            </div>
+          </li>
+          <li class="timeline-item fade-item">
+            <div class="tl-marker"><span class="tl-num">04</span></div>
+            <div class="tl-body">
+              <h3>焚き火を囲んで休憩</h3>
+              <p>焚き火のまわりで温かい飲み物をどうぞ。ガイドと参加者で、静かな夜の時間を分かち合います。</p>
+            </div>
+          </li>
+          <li class="timeline-item fade-item">
+            <div class="tl-marker"><span class="tl-num">05</span></div>
+            <div class="tl-body">
+              <h3>写真撮影・解散</h3>
+              <p>最後に記念写真を撮影して、集合場所へ戻り解散です。夜の余韻とともに、ゆっくりお帰りください。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================================================
+         体験プラン（タブ切り替え）
+         ================================================ -->
+    <section class="plans section" id="plans">
+      <div class="container">
+        <p class="section-eyebrow">PLANS</p>
+        <h2 class="section-title">選べる3つの体験プラン</h2>
+
+        <div class="tabs fade-item">
+          <div class="tab-list" role="tablist" aria-label="体験プラン">
+            <button class="tab-btn is-active" id="tab-standard" role="tab" aria-selected="true" aria-controls="panel-standard">スタンダード</button>
+            <button class="tab-btn" id="tab-photo" role="tab" aria-selected="false" aria-controls="panel-photo">フォトプラン</button>
+            <button class="tab-btn" id="tab-private" role="tab" aria-selected="false" aria-controls="panel-private">プライベート</button>
+          </div>
+
+          <div class="tab-panel is-active" id="panel-standard" role="tabpanel" aria-labelledby="tab-standard">
+            <div class="plan-detail">
+              <div class="plan-main">
+                <h3>スタンダード</h3>
+                <p class="plan-price"><span class="plan-price-num">8,800</span><span class="plan-price-unit">円（税込）/ 1名</span></p>
+                <p class="plan-desc">ナイトウォーク、星空観察、焚き火休憩を楽しむ基本プラン。はじめての方におすすめです。</p>
+              </div>
+              <ul class="plan-includes">
+                <li>ナイトウォーク（約120分）</li>
+                <li>星空観察スポット案内</li>
+                <li>焚き火休憩・温かい飲み物</li>
+                <li>ランタン・防寒具レンタル</li>
+              </ul>
+            </div>
+            <a href="#schedule" class="btn btn-fill btn-plan">この内容で日程を見る</a>
+          </div>
+
+          <div class="tab-panel" id="panel-photo" role="tabpanel" aria-labelledby="tab-photo" hidden>
+            <div class="plan-detail">
+              <div class="plan-main">
+                <h3>フォトプラン</h3>
+                <p class="plan-price"><span class="plan-price-num">12,800</span><span class="plan-price-unit">円（税込）/ 1名</span></p>
+                <p class="plan-desc">ツアー中の写真撮影サポートと、記念写真データ付きのプラン。思い出をかたちに残したい方へ。</p>
+              </div>
+              <ul class="plan-includes">
+                <li>スタンダードの全内容</li>
+                <li>ガイドによる撮影サポート</li>
+                <li>星空・焚き火での記念撮影</li>
+                <li>写真データ10枚以上をお渡し</li>
+              </ul>
+            </div>
+            <a href="#schedule" class="btn btn-fill btn-plan">この内容で日程を見る</a>
+          </div>
+
+          <div class="tab-panel" id="panel-private" role="tabpanel" aria-labelledby="tab-private" hidden>
+            <div class="plan-detail">
+              <div class="plan-main">
+                <h3>プライベート</h3>
+                <p class="plan-price"><span class="plan-price-num">24,000</span><span class="plan-price-unit">円〜（税込）/ 組</span></p>
+                <p class="plan-desc">家族、カップル、少人数グループ向けの貸切プラン。まわりを気にせず、自分たちのペースで夜の森を楽しめます。</p>
+              </div>
+              <ul class="plan-includes">
+                <li>ツアー貸切（最大6名）</li>
+                <li>開始時間の相談可</li>
+                <li>焚き火時間の延長可</li>
+                <li>記念撮影つき</li>
+              </ul>
+            </div>
+            <a href="#schedule" class="btn btn-fill btn-plan">この内容で日程を見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         ギャラリー
+         ================================================ -->
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <p class="section-eyebrow">GALLERY</p>
+        <h2 class="section-title">体験イメージ</h2>
+        <p class="section-note">※ 写真ではなく、雰囲気を表現したイメージです。クリックで拡大表示できます。</p>
+
+        <div class="gallery-grid">
+          <button class="gallery-item fade-item" data-scene="starry" data-title="星空" data-desc="観察スポットでランタンを消すと、頭上いっぱいに星が広がります。">
+            <span class="g-scene g-starry" aria-hidden="true"></span>
+            <span class="g-label">星空</span>
+          </button>
+          <button class="gallery-item fade-item" data-scene="path" data-title="森の小道" data-desc="ランタンの灯りを頼りに、ゆっくりと森の小道を進みます。">
+            <span class="g-scene g-path" aria-hidden="true"></span>
+            <span class="g-label">森の小道</span>
+          </button>
+          <button class="gallery-item fade-item" data-scene="fire" data-title="焚き火" data-desc="パチパチと爆ぜる火を囲んで、温かい飲み物でひと休み。">
+            <span class="g-scene g-fire" aria-hidden="true"></span>
+            <span class="g-label">焚き火</span>
+          </button>
+          <button class="gallery-item fade-item" data-scene="lantern" data-title="ランタン" data-desc="一人ひとつ、ランタンを持って歩きます。柔らかい灯りが足元を照らします。">
+            <span class="g-scene g-lantern" aria-hidden="true"></span>
+            <span class="g-label">ランタン</span>
+          </button>
+          <button class="gallery-item fade-item" data-scene="lake" data-title="夜の湖" data-desc="風のない夜は、湖面に星空が映り込みます。">
+            <span class="g-scene g-lake" aria-hidden="true"></span>
+            <span class="g-label">夜の湖</span>
+          </button>
+          <button class="gallery-item fade-item" data-scene="photo" data-title="記念写真" data-desc="ツアーの最後に、星空の下で記念写真を撮影します。">
+            <span class="g-scene g-photo" aria-hidden="true"></span>
+            <span class="g-label">記念写真</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         数字で見る
+         ================================================ -->
+    <section class="numbers section" id="numbers">
+      <div class="container">
+        <p class="section-eyebrow">NUMBERS</p>
+        <h2 class="section-title">少人数で、ゆっくり楽しむ<br class="sp-br">夜の体験。</h2>
+
+        <div class="numbers-grid">
+          <div class="number-card fade-item">
+            <p class="number-value"><span class="count-up" data-count="120">0</span><span class="number-unit">分</span></p>
+            <p class="number-label">所要時間</p>
+          </div>
+          <div class="number-card fade-item">
+            <p class="number-value"><span class="count-up" data-count="6">0</span><span class="number-unit">名</span></p>
+            <p class="number-label">1日定員</p>
+          </div>
+          <div class="number-card fade-item">
+            <p class="number-value"><span class="number-static">5<span class="number-unit">月</span>〜10</span><span class="number-unit">月</span></p>
+            <p class="number-label">開催期間</p>
+          </div>
+          <div class="number-card fade-item">
+            <p class="number-value"><span class="count-up" data-count="78">0</span><span class="number-unit">%</span></p>
+            <p class="number-label">満天率<span class="number-note">※ サンプル表示の架空データです</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         空き日程・予約導線
+         ================================================ -->
+    <section class="schedule section" id="schedule">
+      <div class="container">
+        <p class="section-eyebrow">SCHEDULE</p>
+        <h2 class="section-title">空き日程を確認する</h2>
+        <p class="section-note">※ 架空の日程表示です。ボタンはNOLTOのLP制作相談ページへつながります。</p>
+
+        <div class="schedule-grid">
+          <div class="schedule-card is-few fade-item">
+            <p class="sc-date"><span class="sc-month">6</span>/<span class="sc-day">21</span><span class="sc-week">土</span></p>
+            <p class="sc-time">19:30 スタート</p>
+            <p class="sc-seats"><span class="sc-badge">残り2席</span></p>
+            <a href="../contact.html?plan=1ページLP制作" class="btn btn-fill btn-sc">この日程で相談する</a>
+          </div>
+
+          <div class="schedule-card is-open fade-item">
+            <p class="sc-date"><span class="sc-month">6</span>/<span class="sc-day">28</span><span class="sc-week">土</span></p>
+            <p class="sc-time">19:30 スタート</p>
+            <p class="sc-seats"><span class="sc-badge">残り4席</span></p>
+            <a href="../contact.html?plan=1ページLP制作" class="btn btn-fill btn-sc">この日程で相談する</a>
+          </div>
+
+          <div class="schedule-card is-full fade-item">
+            <p class="sc-date"><span class="sc-month">7</span>/<span class="sc-day">5</span><span class="sc-week">土</span></p>
+            <p class="sc-time">19:45 スタート</p>
+            <p class="sc-seats"><span class="sc-badge">満席</span></p>
+            <button class="btn btn-disabled btn-sc" disabled aria-disabled="true">満席のため受付終了</button>
+          </div>
+
+          <div class="schedule-card is-few fade-item">
+            <p class="sc-date"><span class="sc-month">7</span>/<span class="sc-day">12</span><span class="sc-week">土</span></p>
+            <p class="sc-time">19:45 スタート</p>
+            <p class="sc-seats"><span class="sc-badge">残り1席</span></p>
+            <a href="../contact.html?plan=1ページLP制作" class="btn btn-fill btn-sc">この日程で相談する</a>
+          </div>
+        </div>
+
+        <div class="schedule-cta fade-item">
+          <p>このような予約導線つきのLPを作りたい方は、NOLTOにご相談ください。</p>
+          <a href="../contact.html?plan=1ページLP制作" class="btn btn-gold">このようなLPを相談する</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         FAQ
+         ================================================ -->
+    <section class="faq section" id="faq">
+      <div class="container container-narrow">
+        <p class="section-eyebrow">FAQ</p>
+        <h2 class="section-title">よくある質問</h2>
+
+        <div class="faq-list">
+          <div class="faq-item fade-item">
+            <button class="faq-question" aria-expanded="false">
+              実在するツアーですか？
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>いいえ。このページはNOLTOの制作サンプルです。実在するツアーではありません。</p>
+            </div>
+          </div>
+
+          <div class="faq-item fade-item">
+            <button class="faq-question" aria-expanded="false">
+              予約ボタンを押すとどうなりますか？
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>NOLTOのお問い合わせページへ移動します。実際のイベント予約ではありません。</p>
+            </div>
+          </div>
+
+          <div class="faq-item fade-item">
+            <button class="faq-question" aria-expanded="false">
+              どんな業種に応用できますか？
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>アウトドアイベント、体験教室、観光ツアー、宿泊施設、ワークショップなどに応用できます。</p>
+            </div>
+          </div>
+
+          <div class="faq-item fade-item">
+            <button class="faq-question" aria-expanded="false">
+              動きのあるLPも作れますか？
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>このサンプルでは、タブ切り替え、モーダル、アコーディオン、スクロール演出などを組み込んでいます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         最終CTA
+         ================================================ -->
+    <section class="final-cta" id="contact">
+      <div class="final-cta-stars" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="final-cta-title">動きのあるLPで、<br>体験の魅力を伝える。</h2>
+        <p class="final-cta-text">
+          イベント、体験教室、観光ツアー、ワークショップなど、内容を見せるだけでなく<br class="pc-br">「参加したくなる流れ」を作るLPも制作サンプルとして公開しています。
+        </p>
+        <div class="final-cta-actions">
+          <a href="../contact.html?plan=1ページLP制作" class="btn btn-gold btn-lg">NOLTOへ相談する</a>
+          <a href="../index.html" class="btn btn-ghost btn-lg">NOLTOトップへ戻る</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       フッター
+       ================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-brand">HOKKAIDO NIGHT FOREST TOUR</p>
+      <p class="footer-note">このページはNOLTOの制作サンプルです。実在するツアー・イベントではありません。</p>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <a href="../index.html">NOLTOへ戻る</a>
+        <a href="../records.html">制作記録</a>
+        <a href="../templates.html">テンプレート</a>
+        <a href="../contact.html?plan=1ページLP制作">お問い合わせ</a>
+        <a href="../privacy.html">プライバシーポリシー</a>
+      </nav>
+      <p class="footer-copy">© NOLTO All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- スマホ固定CTA -->
+  <div class="fixed-cta" id="fixedCta" aria-hidden="true">
+    <a href="#schedule" class="btn btn-ghost btn-fixed">空き日程</a>
+    <a href="../contact.html?plan=1ページLP制作" class="btn btn-gold btn-fixed">LP制作を相談する</a>
+  </div>
+
+  <!-- ギャラリーモーダル -->
+  <div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-content">
+      <button class="modal-close" data-modal-close aria-label="閉じる">×</button>
+      <div class="modal-scene" id="modalScene" aria-hidden="true"></div>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-desc" id="modalDesc"></p>
+      <p class="modal-note">※ NOLTOの制作サンプル用イメージです。</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
