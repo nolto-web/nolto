@@ -40,7 +40,7 @@ ai-syuukyaku-lp/
 公開URL：
 
 ```text
-https://friendly-toffee-1c8e33.netlify.app/ops/
+https://nolto-web.github.io/nolto/ops/
 ```
 
 ## 注意

@@ -43,7 +43,7 @@ const defaultState = {
       title: "HP・SNS簡易診断レポート雛形",
       status: "無料公開中",
       formats: "Word / PDF / Markdown",
-      url: "https://friendly-toffee-1c8e33.netlify.app/templates.html",
+      url: "https://nolto-web.github.io/nolto/templates.html",
       memo: "1個目の無料テンプレート。"
     },
     {
@@ -51,7 +51,7 @@ const defaultState = {
       title: "SNS投稿案10本テンプレート",
       status: "無料公開中",
       formats: "Word / PDF / Excel / Markdown",
-      url: "https://friendly-toffee-1c8e33.netlify.app/templates.html",
+      url: "https://nolto-web.github.io/nolto/templates.html",
       memo: "2個目の無料テンプレート。"
     }
   ],
@@ -65,7 +65,7 @@ const defaultState = {
       postedDate: "",
       url: "",
       purpose: "整体院LPとの違いを見せる。施工事例・信頼感・問い合わせ導線を重視したサンプルとして紹介する。",
-      thread: "1/5\n工務店向けのLPサンプルも公開しています。\n\n施工事例、信頼感、問い合わせ導線を重視した構成です。\n\nhttps://friendly-toffee-1c8e33.netlify.app/sample/\n\n---\n2/5\n工務店向けLPでは、見た人が知りたい情報を早く確認できることを意識しました。\n\n・どんな工事に対応しているか\n・施工事例\n・料金の目安\n・相談までの流れ\n\n---\n3/5\n整体院向けLPとは違い、やわらかさよりも、地域密着の信頼感や実績の見せ方を重視しています。\n\n業種によってLPの雰囲気や必要な情報はかなり変わります。\n\n---\n4/5\nNOLTOでは、業種ごとに雰囲気を変えたLPサンプルを少しずつ増やしています。\n\n現在は、工務店向けと整体院・リラクゼーションサロン向けを公開中です。\n\n---\n5/5\n制作サンプルはこちら\nhttps://friendly-toffee-1c8e33.netlify.app/sample/\n\nNOLTOはこちら\nhttps://friendly-toffee-1c8e33.netlify.app/",
+      thread: "1/5\n工務店向けのLPサンプルも公開しています。\n\n施工事例、信頼感、問い合わせ導線を重視した構成です。\n\nhttps://nolto-web.github.io/nolto/sample/\n\n---\n2/5\n工務店向けLPでは、見た人が知りたい情報を早く確認できることを意識しました。\n\n・どんな工事に対応しているか\n・施工事例\n・料金の目安\n・相談までの流れ\n\n---\n3/5\n整体院向けLPとは違い、やわらかさよりも、地域密着の信頼感や実績の見せ方を重視しています。\n\n業種によってLPの雰囲気や必要な情報はかなり変わります。\n\n---\n4/5\nNOLTOでは、業種ごとに雰囲気を変えたLPサンプルを少しずつ増やしています。\n\n現在は、工務店向けと整体院・リラクゼーションサロン向けを公開中です。\n\n---\n5/5\n制作サンプルはこちら\nhttps://nolto-web.github.io/nolto/sample/\n\nNOLTOはこちら\nhttps://nolto-web.github.io/nolto/",
       memo: "別日に投稿する候補。投稿後にURLと反応を記録する。"
     },
     {
@@ -77,7 +77,7 @@ const defaultState = {
       postedDate: "",
       url: "",
       purpose: "records.htmlへの導線を増やす。",
-      thread: "1/5\nNOLTOの制作記録をnoteにまとめています。\n\nLP制作、問い合わせフォーム、Netlify公開、無料テンプレート、SNS導線づくりなど、作ったものを記録しています。\n\nhttps://friendly-toffee-1c8e33.netlify.app/records.html",
+      thread: "1/5\nNOLTOの制作記録をnoteにまとめています。\n\nLP制作、問い合わせフォーム、Netlify公開、無料テンプレート、SNS導線づくりなど、作ったものを記録しています。\n\nhttps://nolto-web.github.io/nolto/records.html",
       memo: "記事がもう少し増えたら投稿してもよい。"
     }
   ],

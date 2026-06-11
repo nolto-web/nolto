@@ -1,5 +1,5 @@
 # HP・SNS 簡易診断レポート雛形
-**提供：NOLTO**  https://friendly-toffee-1c8e33.netlify.app/templates.html
+**提供：NOLTO**  https://nolto-web.github.io/nolto/templates.html
 
 ---
 

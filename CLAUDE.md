@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-NOLTO is a static portfolio/LP site for AI-assisted web production services. It is hosted on Netlify at `https://friendly-toffee-1c8e33.netlify.app/`. There is no build step — edit files and deploy by uploading to Netlify manually.
+NOLTO is a static portfolio/LP site for AI-assisted web production services. It is hosted on GitHub Pages at `https://nolto-web.github.io/nolto/`. There is no build step — edit files and deploy by pushing to the GitHub repository.
 
 ## Architecture
 

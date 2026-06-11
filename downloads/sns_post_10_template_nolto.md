@@ -1,5 +1,5 @@
 # SNS投稿案10本テンプレート
-**提供：NOLTO**  https://friendly-toffee-1c8e33.netlify.app/templates.html
+**提供：NOLTO**  https://nolto-web.github.io/nolto/templates.html
 
 ---
 
