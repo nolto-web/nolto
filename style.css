@@ -4124,6 +4124,21 @@ img { max-width: 100%; height: auto; display: block; }
   margin-top: 32px;
 }
 
+.diagnosis-sub-cta {
+  background: #fff;
+  color: var(--navy-dark);
+  border-color: rgba(28,43,69,.22);
+  box-shadow: 0 8px 22px rgba(28,43,69,.08);
+}
+
+.diagnosis-sub-cta:hover {
+  background: var(--ivory);
+  color: var(--navy-dark);
+  border-color: rgba(28,43,69,.34);
+  box-shadow: 0 12px 28px rgba(28,43,69,.12);
+  transform: translateY(-2px);
+}
+
 .diagnosis-hero-report {
   position: relative;
 }
