@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nolto-web.github.io/nolto/sitemap.xml
