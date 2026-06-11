@@ -30,6 +30,13 @@
   </url>
 
   <url>
+    <loc>https://nolto-web.github.io/nolto/diagnosis.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://nolto-web.github.io/nolto/sample/</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>

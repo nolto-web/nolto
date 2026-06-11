@@ -94,12 +94,18 @@ const targets = document.querySelectorAll(
     '.tool-detail-card',
     '.template-card',
     '.template-item-card',
+    '.diagnosis-intro-card',
+    '.diagnosis-list-card',
+    '.diagnosis-check-card',
+    '.diagnosis-price-card',
+    '.report-preview',
     '.release-policy-card',
     '.process-step',
     '.faq-item',
-    '.hv-record-card',
-    '.hv-template-card',
-    '.overview-card'
+    '.overview-card',
+    '.sec-head',
+    '.record-featured',
+    '.follow-card'
   ].join(',')
 );
 
