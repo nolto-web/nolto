@@ -4124,19 +4124,24 @@ img { max-width: 100%; height: auto; display: block; }
   margin-top: 32px;
 }
 
-.diagnosis-sub-cta {
-  background: #fff;
-  color: var(--navy-dark);
-  border-color: rgba(28,43,69,.22);
-  box-shadow: 0 8px 22px rgba(28,43,69,.08);
+.diagnosis-hero-secondary-btn {
+  background: #ffffff !important;
+  color: #14233a !important;
+  border: 1px solid rgba(20, 35, 58, 0.22) !important;
+  box-shadow: 0 10px 24px rgba(20, 35, 58, 0.10) !important;
 }
 
-.diagnosis-sub-cta:hover {
-  background: var(--ivory);
-  color: var(--navy-dark);
-  border-color: rgba(28,43,69,.34);
-  box-shadow: 0 12px 28px rgba(28,43,69,.12);
+.diagnosis-hero-secondary-btn:hover {
+  background: #fffaf2 !important;
+  color: #14233a !important;
+  border-color: rgba(201, 121, 43, 0.45) !important;
   transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(20, 35, 58, 0.14) !important;
+}
+
+.diagnosis-hero-secondary-btn:focus-visible {
+  outline: 3px solid rgba(201, 121, 43, 0.35);
+  outline-offset: 3px;
 }
 
 .diagnosis-hero-report {
